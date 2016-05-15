@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Swinburne University of Technology</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/site.css" rel="stylesheet">
+
+
+  
+    </head>
+    <body>
+    <!-- &nbsp; for space if we need -->
+      <ul class="nav nav-tabs">
+        <li  class="active" id="chooseClassTimetableTab"><a href="#chooseclasstimetable" ><span class="glyphicon glyphicon-hand-up"></span>   Choose class Timetable </a></li>
+        <li><a href="#viewclassdetails" data-toggle="tab"><span class="glyphicon glyphicon-th-list"></span>   View Class Details </a></li>
+        <li ><a href="#viewclasstimetable" data-toggle="tab"><span class="glyphicon glyphicon-calendar"></span>
+View Timetable </a></li>
+      </ul>
+    </br>
+
+
+    <div id="my-tab-content" class="tab-content">
+      <div id="chooseclasstimetable" class="tab-pane fade in active" >
+        
+          <div class="container">
+            <button type="button" class="btn btn-danger" onclick="toggler('calendar2');">Auto Generete</button> 
+            <br>
+            <br> 
+           <!-- <button type="button" class="btn btn-danger">Auto Generate</button>  -->
+                    
+          </div>
+          <div class="container">
+              <div class="container">
+                <div class="container" id="calendar2" style="display: none;">
+                  <br>
+                </div>
+              </div>
+            
+          </div>
+      </div>
+      <div id="viewclassdetails" class="tab-pane fade" >
+
+        <div class="container">
+          <h1>Class Details</h1>
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#dayview" data-toggle="tab">Day View</a></li>
+            <li><a href="#unitview" data-toggle="tab">Unit View</a></li>
+            <li><a href="#mapview" data-toggle="tab">Map View</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div id="dayview" class="tab-pane fade in active">
+                  <br>         
+                    <button type="button" id="exportCalendarDayView" class="btn btn-primary  btn-sm pull-right" style="margin-left: 10px">Export To Calendar</button>
+                    <button type="button" id="exportPdfDayView" class="btn btn-primary  btn-sm pull-right">Export To PDF</button>  
+                  <br>    
+              
+              <!-- <button type="button" class="btn btn-primary btn-lg btn-block" id="mondayview" onclick="toggler('mondayviewtable');">Monday</button>
+              <p id="mondayviewtable" style="display: none;">You do not have any class today, ENJOY!!!</p> -->
+              <br>
+              <button type="button" class="btn btn-secondary btn-lg btn-block" id="tuesdayview" onclick="toggler('tuesdayviewtable');">Tuesday</button>
+                <table class="table table-striped" id="tuesdayviewtable" style="display: none;">
+    <thead>
+        <tr>
+            <th>Unit Name</th>
+            <th>Lec/Tute Time</th>
+            <th>Location</th>
+            <th>Lecturer/Tutor Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="">
+            <td>UCD Lecture</td>
+            <td>17:30</td>
+            <td>EN 103</td>
+            <td><a href="mailto:asdf@swin.edu.au" >Carola Von Vaggo</a></td>
+            
+        </tr> 
+        <tr class="">
+            <td>UCD Tutorial</td>
+            <td>19:30</td>
+            <td>BA 809</td>
+            <td><a href="mailto:xyz@swin.edu.au">Niroshinie Fernando</a></td>
+            
+        </tr> 
+    </tbody>
+</table>
+
+              <button type="button" class="btn btn-primary btn-lg btn-block" id="wednesdayview" onclick="toggler('wednesdayviewtable');">Wednesday</button>
+
+              <table class="table table-striped" id="wednesdayviewtable" style="display: none;">
+    <thead>
+        <tr>
+            <th>Unit Name</th>
+            <th>Lec/Tute Time</th>
+            <th>Location</th>
+            <th>Lecturer/Tutor Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="">
+            <td>OOP Lecture</td>
+            <td>17:30</td>
+            <td>EN 101</td>
+            <td><a href="mailto:abayley@swin.edu.au">Anthony Bayley</a></td>
+            
+        </tr> 
+    </tbody>
+</table>
+              <button type="button" class="btn btn-secondary btn-lg btn-block" id="thursdayview" onclick="toggler('thursdayviewtable');">Thursday</button>
+
+                <table class="table table-striped" id="thursdayviewtable" style="display: none;">
+    <thead>
+        <tr>
+            <th>Unit Name</th>
+            <th>Lec/Tute Time</th>
+            <th>Location</th>
+            <th>Lecturer/Tutor Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="">
+            <td>OOP Tutorial</td>
+            <td>17:30</td>
+            <td>BA 609</td>
+            <td><a href="mailto:abayley@swin.edu.au">Anthony Bayley</a></td>
+            
+        </tr> 
+    </tbody>
+</table>         
+              <!--<button type="button" class="btn btn-primary btn-lg btn-block" id="fridayview" onclick="toggler('fridayviewtable');">Friday</button>
+            -->
+
+
+
+            </div>
+
+
+
+            <div id="unitview" class="tab-pane fade">
+            <div class="container">
+              <!--our export button-->
+              <br>
+                <button type="button" id="exportCalendarUnitView" class="btn btn-primary  btn-sm pull-right" style="margin-left: 10px">Export To Calendar</button>
+                <button type="button" id="exportPdfUnitView" class="btn btn-primary  btn-sm pull-right">Export To PDF</button>  
+            <br>
+            <br>
+              <button type="button" class="btn btn-success btn-lg btn-block" id="unit1"  onclick="toggler('unitonetable');">User Centred Design</button>
+              </br>
+              </br>
+              
+
+              <table class="table table-striped" id="unitonetable" style="display: none;">
+    <thead>
+        <tr>
+            <th>Unit Name</th>
+            <th>Lec/Tute Time</th>
+            <th>Location</th>
+            <th>Lecturer/Tutor Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="">
+            <td>UCD Tutorial</td>
+            <td>Tuesday 19:30</td>
+            <td>BA 809</td>
+            <td><a href="mailto:nfernando@swin.edu.au">Niroshinie Fernando</a></td>
+            
+        </tr>
+        <tr >
+            <td>UCD Lecture</td>
+            <td>Tuesday 17:30</td>
+            <td>EN 103</td>
+            <td><a href="mailto:xyz@swin.edu.au">Carola Von Vaggo</a></td>
+        </tr>
+        
+    </tbody>
+</table>
+<button type="button" class="btn btn-danger btn-lg btn-block" id="unit1" onclick="toggler('unittwotable');">Object Oriented Programming in Java</button>
+<table class="table table-striped" id="unittwotable" style="display: none;">
+    <thead>
+        <tr>
+            <th>Unit Name</th>
+            <th>Lec/Tute Time</th>
+            <th>Location</th>
+            <th>Lecturer/Tutor Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="">
+            <td>OOP Tutorial</td>
+            <td>Thursday 17:30</td>
+            <td>BA 609</td>
+            <td><a href="mailto:abayley@swin.edu.au">Anthony Bayley</a></td>
+            
+        </tr>
+        <tr >
+            <td>OOP Lecture</td>
+            <td>Wednesday 17:30</td>
+            <td>EN 101</td>
+            <td><a href="mailto:abayley@swin.edu.au">Anthony Bayley</a></td>
+        </tr>
+        
+    </tbody>
+</table>
+            </div>
+              
+            </div>
+            
+            <div id="mapview" class="tab-pane fade">
+                <br>
+                <button type="button" id="exportCalendarMapView" class="btn btn-primary  btn-sm pull-right" style="margin-left: 10px">Export To Calendar</button>
+                <button type="button" id="exportPdfMapView" class="btn btn-primary  btn-sm pull-right">Export To PDF</button> 
+                <br>
+                <br>
+                <div id="logo">
+                	<img src="http://aswec2013.ict.swin.edu.au/images/swinburne_map.JPG" alt="Swinburne map" usemap="#imageMapMapAreas" id="imageMap" class="map">	
+                
+
+               	   <div id="ENBuildingID" class="ENBuilding" data-toggle="tooltip" data-placement="right" title="UCD Lecture
+Tuesday 17:30
+OOP Lecture
+Wesnedday 17:30">  </div>
+				  <div id ="BABuildingID"class="BABuilding" title="UCD Tutorial
+Tuesday 19:30
+OOP Tutorial
+Thursday 17:30"> </div>
+
+
+
+                </div>
+                
+
+
+                <map name="#imageMapMapAreas" id="imageMapMapAreas">
+
+
+                  <area alt="" title="UCD Lecture
+Tuesday 17:30
+OOP Lecture
+Wesnedday 17:30
+                   " id="EN"data-toggle="tooltip" data-placement="right"  href="#" shape="poly" coords="487,304, 489,487, 577,489, 572,343, 543,340, 534,303, 488,303" data-maphilight='{"strokeColor":"0000ff","strokeWidth":5,"fillColor":"ff0000","fillOpacity":0.6}'  /> 
+                  <area alt="" title="AMC" id="AMC" data-toggle="tooltip" data-placement="right" href="#" shape="poly" coords="856,500,1037,499,1041,596,853,597" />
+                  <area alt="" title="UCD Tutorial
+Tuesday 19:30
+OOP Tutorial
+Thursday 17:30
+
+                  " id="BA" data-toggle="tooltip" data-placement="right" href="#" shape="poly" coords="853,281,1039,284,1037,344,852,324" data-maphilight='{"strokeColor":"0000ff","strokeWidth":5,"fillColor":"ff0000"}'/>
+
+                  
+                  <area alt="" title="AGSE" data-toggle="tooltip"  data-placement="right" href="#" shape="poly" coords="855,49,1030,54,1035,87,865,93,963,132,988,96,855,52,859,92,951,80,1023,86,891,69" data-maphilight='{"strokeColor":"0000ff","strokeWidth":5,"fillColor":"ff0000","fillOpacity":0.6}'/>
+
+                </map>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+    <div id="viewclasstimetable" class="tab-pane fade">
+      <div class="container">
+           <div class="container">
+            <p>Click on the options to view Calendar</p>
+            <div id="calendar"></div>
+          </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+ 
+	<!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>    -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+  <script src="js/bootstrap.min.js"></script> 
+  <script src="js/jquery.maphilight.js"></script>
+  <script class="cssdesk" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js" type="text/javascript"></script>
+  <script src="js/alert.js"></script>
+  <script type="text/javascript" src="js/myscript.js"></script> 
+  <script type="text/javascript"> 
+  	
+  </script>
+</body>
+</html>
